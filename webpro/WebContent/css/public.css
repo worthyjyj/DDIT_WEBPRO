@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+form{
+  border : 5px double hotpink;
+  margin : 20px /*<-좌우 20씩*/ auto; 
+  padding : 30px;
+  width : 500px;
+}
+
+pre{
+	border : 4px double blue;
+	border-left : none;
+	border-right : none; 
+	padding : 10px; 
+	font-size : 1.3em;
+	background-color : skyblue;  
+}

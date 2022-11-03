@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"  href="http://localhost/webpro/css/public.css" type="text/css">
+
+<style>
+div{
+ border : 2px solid blue; 
+ margin : 20px; 
+}
+
+p{
+ border : 1px dotted green;
+ margin-left : 20px;
+ margin-right : 20px;
+ font-size : 2.0em; /*현재크기에서 2배커진다는의미*/
+ padding : /*녹색 테두리 안에서 여백 */ 20px; 
+}
+div p{
+ background-color : yellow;
+}
+div>p{
+ color : red; 
+}
+div span{
+  background-color : pink; 
+}
+div > span{
+ font-size : 1.5em;
+}
+
+</style>
+</head>
+<body>
+<pre>
+후손 선택 : 자식을 포함한다 A b
+A의 후손 b를 선택한다. (b는 자식일 수도 있음. 후손은 자식과 손자 모두 포함)
+
+자식 선택 : A > b (공백있어도되고 없어도 되고)
+A의 자식 b를 선택한다. 
+</pre>
+
+<div>
+<p>무궁화 꽃이 피었습니다</p>
+<p>능소화 꽃이 피었습니다</p>
+<span>라일락 꽃이 피었습니다</span>
+</div>
+
+<div>
+<p>단풍잎이 빨갛게 물들었습니다</p>
+<p>은행잎이 노랗게 물들었습니다
+<span>시냇물은 졸졸졸졸 고기들은 왔다갔다</span>
+</p>
+</div>
+
+
+
+</body>
+</html>

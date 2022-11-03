@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="http://localhost/webpro/css/public.css">
+
+<style type="text/css">
+
+form{
+	border : 5px solid orange; /*동일요소의 스타일 적용시 (인라인/ 내부 /외부 순) 외부 /내부중  내부가 실행됨*/
+
+	margin : 20px;
+}
+
+label{
+ display : inlice-block;
+ width : 100px; 
+ height : 30px;
+ color : blue; 
+}
+
+
+</style>
+</head>
+<body>
+
+	<form action="form연습.jsp" method="post">
+	
+	<label style="color:red;">이름</label>
+	<input type="text" name="name"><br>
+
+	<label>주소</label>
+	<input type="text" name="addr"><br>
+	
+	<label>이메일</label>
+	<input type="text" name="email"><br>
+	
+	<label>성별</label>
+	<input type = "radio" name="gender" value="남자"> 남자
+	<input type = "radio" name="gender" value="여자"> 여자<br>
+	<!-- 라디오타입은 value 필수 -->
+	
+	
+	<label>내용</label><br>
+	<textarea rows="10" cols="60" name="area"></textarea>
+	
+	<br>
+	<input type="submit">
+	<input type="reset">
+
+	</form>
+</body>
+</html>

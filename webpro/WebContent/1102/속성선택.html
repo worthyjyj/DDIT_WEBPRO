@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+p{
+ font-size : 2.0em;
+ font-weight : bold;
+}
+#pp1{
+ background : crimson;
+}
+
+p[id=pp1]{
+ color : yellow;
+}
+
+/* .sp{ */
+/*  color : red; */
+/*  font-size : 2.0em; */
+/*  font-style : italic; */
+/* } */
+
+span[class=sp]{
+  color : red; 
+  font-size : 2.0em; 
+  font-style : italic; 
+}
+span[title=개나리]{
+  text-decoration: underline;
+}
+span[title]{
+/*   border : 2px dashed green; */
+
+ border-width : 2px 5px 10px 20px;
+ border-style : solid dotted; 
+
+/*  border-top-width : 2px; */
+/*  border-top-style : dashed; */
+/*  border-top-color: green; */
+ 
+  font-size: 1.5em;
+}
+
+</style>
+</head>
+<body>
+
+<div>
+<span title="진달래">진달래 꽃이 피었습니다</span>
+<p>무궁화 꽃이 피었습니다</p>
+<p id="pp1">능소화 꽃이 피었습니다</p>
+<span class="sp">라일락 꽃이 피었습니다</span>
+<span>수선화 꽃이 피었습니다</span>
+<span class="sp">국화꽃이 피었습니다</span>
+<span title="개나리">개나리꽃이 피었습니다</span>
+</div>
+
+
+
+</body>
+</html>

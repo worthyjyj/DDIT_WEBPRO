@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style> 
+
+ul, ol{
+ border : 1px solid blue;
+/*  padding : 10px; */
+
+ list-style-position : outside;
+ width : 15%;
+ height : 250px; 
+ float : left;
+ margin : 5px;
+ overflow : /*hidden; 넘치는 목록 처리 scroll;*/ auto; 
+}
+
+ol#o1{
+ clear : both; 
+}
+
+li{
+/*  border : 1px dotted green; */
+ padding : 5px; 
+ margin : 5px; 
+}
+#u2{
+ list-style-type : circle;
+ background : rgb(255,210,180);
+}
+ul[id=u3]{
+ list-style-type : square; 
+ background : rgb(95%,70%,88%);
+}
+ul[id=u4]{
+ list-style-image : url('../images/check.png');
+ background : rgba(95%,70%,88%,0.7); /*0.7은 투명도 조절*/
+}
+ol[id=o2]{
+ list-style-type: /*upper-alpha;*/ lower-alpha;
+ background : #f1aad7;
+}
+
+ol[id=o3]{
+ list-style-type: hangul;
+}
+ol[id=o4]{
+ list-style-type: korean-hangul-formal;
+}
+</style>
+</head>
+
+<body>
+<pre>
+ul : 번호 없는 리스트 : disk 기호 표시 
+ol : 번호 있는 리스트
+li : 리스트 아이템
+</pre>
+
+
+<ul id="u1">
+<h3>disk</h3>
+<li>무궁화</li>
+<li>개나리</li>
+<li>진달래</li>
+<li>레전드 아이템</li>
+</ul>  
+
+
+<ul id="u2">
+<h3>circle</h3>
+<li>무궁화</li>
+<li>개나리</li>
+<li>진달래</li>
+<li>레전드 아이템</li>
+</ul>  
+
+<ul id="u3">
+<h3>square</h3>
+<li>무궁화</li>
+<li>개나리</li>
+<li>진달래</li>
+<li>레전드 아이템</li>
+</ul>  
+
+<ul id="u4">
+<h3>img</h3>
+<li>무궁화</li>
+<li>개나리</li>
+<li>진달래</li>
+<li>레전드 아이템</li>
+</ul> 
+ 
+
+<ol id="o1">
+<h3>desimal</h3>
+<li>무궁화</li>
+<li>개나리</li>
+<li>진달래</li>
+<li>레전드 아이템</li>
+</ol>  
+
+<ol id="o2">
+<h3>lower-alpha</h3>
+<li>무궁화</li>
+<li>개나리</li>
+<li>진달래</li>
+<li>레전드 아이템</li>
+</ol>  
+
+<ol id="o3">
+<h3>hangul</h3>
+<li>무궁화</li>
+<li>개나리</li>
+<li>진달래</li>
+<li>레전드 아이템</li>
+</ol>  
+
+<ol id="o4">
+<h3>korean-hangul-formal</h3>
+<li>무궁화</li>
+<li>개나리</li>
+<li>진달래</li>
+<li>레전드 아이템</li>
+</ol>  
+
+
+
+</body>
+</html>

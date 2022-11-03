@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css"> 
+
+<style>
+p{
+  background : yellow;
+}
+p:first-child{
+ background : pink;
+}
+p:last-child{
+ font-size : 1.5em;
+}
+p:nth-child(2n){
+ background : lightblue;
+}
+p:nth-child(odd){ 
+ color : red; /*폰트컬러를 바꿀때는 그냥 color문으로!*/ 
+}
+
+table{
+ border : 1px solid blue;
+ margin : 20px;
+}
+
+td{
+ width: 300px;
+ height: 50px;  
+ text-align : center;
+}
+
+table#tab1 td:first-child{
+ background : #93daff
+}
+#tab1 td:nth-child(2){
+  background : #CDEDFA
+}
+#tab1 td:nth-child(3){
+  background : #CDEDFA
+}
+
+.title{
+ font-size : 1.5em;
+}
+
+#tab1 tr:first-child td{ 
+ background : black;
+ color : white;  
+}
+
+#tab2 tr:nth-child(2n+1){
+  background : #93daff;
+}
+#tab2 tr:nth-child(2n){
+  background : #CDEDFA;
+}
+#tab2 tr:first-child{
+  background : black;
+  color : white;
+}
+
+</style>
+
+</head>
+<body>
+<pre>
+의사클래스 - 구조에 의한 선택
+부모와 자식의 관계로 선택한다
+:first-child 
+:last-child
+:nth-child(2n)<!-- 자식의 짝수 --> 
+:nth-child(2n+1)<!-- 자식의 홀수 -->
+:nth-child(even)<!-- 자식의 짝수 --> 
+:nth-child(odd)<!-- 자식의 홀수 -->
+
+</pre>
+
+<div> 
+ <p>무궁화 꽃이 피었습니다</p> <!-- 짝수/홀수 번호 정할 때 1번으로 됨 -->
+ <p>능소화 꽃이 피었습니다</p> <!-- 짝수/홀수 번호 정할 때 2번으로 됨 -->
+ <p>우리집 강아지는 복슬강아지</p> 
+ <p>학교갔다 돌아오면 멍멍멍</p>
+ <p>반갑다고 꼬리치며 멍멍멍</p>
+</div>
+
+<div> 
+ <p>무궁화 꽃이 피었습니다</p>  <!-- 짝수/홀수 번호 정할 때 1번으로 됨 -->
+ <p>능소화 꽃이 피었습니다</p>  <!-- 짝수/홀수 번호 정할 때 2번으로 됨 -->
+ <p>우리집 강아지는 복슬강아지</p>
+ <p>학교갔다 돌아오면 멍멍멍</p>
+ <p>반갑다고 꼬리치며 멍멍멍</p>
+</div>
+
+<table id="tab1" border="1">
+ <tr>
+  <td class="title">이름</td>
+  <td class="title">주소</td>
+  <td class="title">전화번호</td>
+  <td class="title">이메일</td>
+  </tr>
+
+ <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  </tr>
+
+ <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  </tr>
+
+</table>
+
+<table id="tab2" border="1">
+ <tr>
+  <td>이름</td>
+  <td>주소</td>
+  <td>전화번호</td>
+  <td>이메일</td>
+  </tr>
+
+ <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  </tr>
+
+ <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  </tr>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="../css/public.css" type="text/css">
+<!-- ../  ==> 상위폴더라는 뜻 (상대주소) -->
+
+<style>
+ div{
+  border : 1px dotted orange;
+  margin : 30px;
+  padding : 20px; 
+ }
+ 
+ div *{
+  font-size : 1.5em;
+ }
+ 
+ #pp1 + span{
+   background-color : lime; 
+ }
+ #pp1 ~ span{
+  color : blue;
+ }
+ #pp2 + p {
+  color : red;
+ }
+ #pp2 ~ p{
+  background-color : #fa2dad; 
+ }
+</style>
+</head>
+<body>
+<pre>
+형제선택
+A + b : A형제들 중 바로 다음 첫번째로 나오는 b형제를 선택
+A ~ b : A형제들 중 다음의 형제들 중 모든 b형제를 선택 
+</pre>
+
+
+<div>
+<span>진달래 꽃이 피었습니다</span>
+<p>무궁화 꽃이 피었습니다</p>
+<p id="pp1">능소화 꽃이 피었습니다</p>
+<span>라일락 꽃이 피었습니다</span>
+<span>수선화 꽃이 피었습니다</span>
+<span>국화꽃이 피었습니다</span>
+<span>개나리꽃이 피었습니다</span>
+</div>
+
+<div>
+<p>단풍잎이 빨갛게 물들었습니다</p>
+<p id="pp2">은행잎이 노랗게 물들었습니다
+<span>시냇물은 졸졸졸졸 고기들은 왔다갔다</span>
+</p>
+<p>우리집 강아지는 복슬강아지</p>
+<p>학교갔다 돌아오면 멍멍멍</p>
+<p>반갑다고 꼬리치며 멍멍멍</p>
+</div>
+
+</body>
+</html>

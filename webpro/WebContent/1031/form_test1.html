@@ -1,0 +1,129 @@
+<!doctype html>
+
+
+<html>
+  <head>
+     <meta charset="utf-8">
+	<title>form양식 
+	</title>
+	
+	<style>
+	label{
+	 display : inline-block; <!--블럭요소 쓰면크기 변경가능-->
+	  width: 130px;
+	  height: 30px; 
+	 /* border : 1px dotted orange; */
+	}
+	
+	form,div {
+	   border : 2px solid blue; 
+	   width: 70%;
+	   
+	   /*
+	   margin-top : 200px; 
+	   margin-left : 300px; 
+	*/	
+	 margin : 100px auto;
+	 
+	 padding : 30px; 
+	 /*
+	 위아래 좌우 
+	 */ 
+	
+	}
+	
+	div{
+	
+	}
+	</style>
+	
+	<script type="text/javascript">
+	
+	function proc1(){
+		//입력한 값을 가져온다 - value를 이용 
+		var vname = document.ff.name.value;
+		var vpass = document.ff.pass.value; 
+		var vid = document.ff.id.value; 
+		
+		
+		//출력한다 id가 result1인 요소에 출력할 것임 
+		
+		var res = "이름 " +vname + "<br>";
+		res += "아이디" + vid + "<br>";
+		res += "비밀번호" +vpass +"<br>";
+		
+		//출력할 때는 value가 아니라 innerHTML이용
+		document.getElementById('result1').innerHTML = res;
+	
+	
+	}
+	
+	function proc2(){
+		//선택한 색상값을 가져온다. 
+		var vcolor = document.ff.color.value;
+		console.log(vcolor);
+		
+		//요소선택 - style변경 
+		document.ff.style.backgroundColor = vcolor; //폼만 바꿈
+		
+// 		document.getElementById('result1').style.backgroundColor = vcolor; //밑에꺼 
+		
+// 		document.body.style.backgroundColor=vcolor; //전체
+		
+		
+		
+	}
+	
+	</script>
+	
+  </head>
+  
+  <body>
+  <!-- 
+  인라인 요소 : 강제 줄바꿈이 필요 - label, input label 
+            크기설정 (width, height)불가 : 
+  블럭요소 : 자동으로 줄 바꿈 실행 -h1, p, div, form table
+    -->
+    <form action="form_test1.jsp" name="ff" method="post"><!--비밀번호등 보안문제 있을 경우 post-->
+	
+		<label>이름</label> 
+		<input type = "text" name= "name" value="아무개" pattern="[가-힣]{2,5}"><br>
+		<label>아이디</label>  <input size="20" required type="text" name="id" autofocus placeholder="아이디 입력" ><br>
+		<label>비밀번호</label>  <input size="20" title="12345678" type="password" name="pass"><br>
+		<label>성별</label> <input type="radio" name="gender" value="남자" > 남자 
+				<input type="radio" name="gender" value="여자" checked> 여자
+		<br>
+		<label>좋아하는 음식</label> 
+		<input type="checkbox" name="food" value="갈비찜" checked="checked"> 갈비찜
+		<input type="checkbox" name="food" value="만두" > 만두
+		<input type="checkbox" name="food" value="피자" > 피자
+		<input type="checkbox" name="food" value="떡볶이" > 떡볶이
+		<input type="checkbox" name="food" value="순대" > 순대
+		<input type="checkbox" name="food" value="초밥" checked> 초밥
+		<input type="checkbox" name="food" value="짜장면" > 짜장면
+		<input type="checkbox" name="food" value="김치찌개" > 김치찌개 
+		<br>
+		<label>생일</label> <input type="date" name="bir"><br>
+		
+		<label>전화번호</label> <input type="text" name="tel" pattern="[0-9]{2,3}-[0-9]{4}-[\d]{4}"><br>
+		
+		<label>이메일</label> <input type="email" name="email"><br>
+		
+		
+		<label>색상</label> <input type="color" name="color" onchange="proc2()"><br>
+		
+		
+		
+		<input type = "hidden" name="age" value="12"> <!--서버로 나이 12를 보냄(value)-->
+		<input type="button" onclick="proc1()" value="확인">
+		<input type="submit" value="전송">
+		<input type="reset" value="취소">
+		
+	
+	
+	
+	
+	</form>
+	<div id="result1"></div>
+  </body>
+</html>
